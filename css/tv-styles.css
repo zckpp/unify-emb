@@ -1,0 +1,45 @@
+body {
+	background: #fff;
+	padding: 20px;
+}
+.tv-seminar-item {
+	width: 485px;
+	height: 300px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 1.2em;	
+}
+.tv-seminar-details {
+    display: block;
+    margin-left: 105px;
+}
+.tv-slide-title {
+	font-size: 1.75em;
+	font-weight: bold;
+	clear: both;
+}
+.tv-seminar-date {
+	margin: 0 0 -3px 0;
+    font-size: 0.9em;
+}
+.tv-seminar-speaker {
+	font-size: 1.4em;
+	margin: 0 0 15px 0;
+}
+.tv-seminar-institution {
+	font-weight: bold;
+}
+.tv-seminar-dept {
+    margin: 0 0 10px 0;
+    font-style: italic;
+    font-size: 0.9em;
+}
+.tv-seminar-title {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+.tv-seminar-event-title {
+	margin: 0 0 5px 0;
+}
+.tv-seminar-host {
+
+}

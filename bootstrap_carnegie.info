@@ -1,0 +1,89 @@
+name = Carnegie Bootstrap Theme
+description = Carnegie Science Department of Embryology.
+core = 7.x
+base theme = bootstrap
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[user_bar_first]		= 'User Bar First'
+regions[user_bar_second]    = 'User Bar Second'
+regions[header_first]       = 'Header First'
+regions[header_second]      = 'Header Second'
+regions[navigation]     	= 'Navigation'
+regions[slider]     	    = 'Slider'
+regions[featured_news]      = 'Featured News'
+regions[preface_first]      = 'Preface First'
+regions[preface_second]     = 'Preface Second'
+regions[preface_third]      = 'Preface Third'
+regions[highlighted]    	= 'Highlighted'
+regions[help]           	= 'Help'
+regions[breadcrumb]  	    = 'Breadcrumb'
+regions[sidebar_first]  		= 'Sidebar First'
+regions[content]        	= 'Content'
+regions[sidebar_second] 		= 'Sidebar Second'
+regions[postscript_first]   = 'Postscript First'
+regions[postscript_second]  = 'Postscript Second'
+regions[postscript_third]   = 'Postscript Third'
+regions[footer_first]       = 'Footer First'
+regions[footer_second]      = 'Footer Second'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+
+stylesheets[all][] = css/bootstrap.css
+stylesheets[all][] = css/animate.css
+stylesheets[all][] = css/font-awesome.min.css
+stylesheets[all][] = css/font-awesome.min.css
+stylesheets[all][] = css/font-awesome.min.css
+stylesheets[all][] = css/carnegie.css
+stylesheets[all][] = css/ciw_unify.css
+
+
+; For information on choosing the desired method, please read the Drupal
+; Bootstrap sub-theme "how-to" documentation:
+; https://drupal.org/node/1978010
+
+; ;----------------------------------
+; ; METHOD 1: Bootstrap Source Files
+; ;----------------------------------
+; 
+; ;;;;;;;;;;;;;;;;;;;;;
+; ;; Scripts
+; ;;;;;;;;;;;;;;;;;;;;;
+; 
+ scripts[] = 'js/carnegie.js'
+ scripts[] = 'js/wow.min.js'
+ scripts[] = 'js/jquery.matchHeight-min.js'
+ scripts[] = 'js/bootstrap-hover-dropdown.js'
+; scripts[] = 'bootstrap/js/affix.js'
+; scripts[] = 'bootstrap/js/alert.js'
+; scripts[] = 'bootstrap/js/button.js'
+; scripts[] = 'bootstrap/js/carousel.js'
+; scripts[] = 'bootstrap/js/collapse.js'
+; scripts[] = 'bootstrap/js/dropdown.js'
+; scripts[] = 'bootstrap/js/modal.js'
+; scripts[] = 'bootstrap/js/tooltip.js'
+; scripts[] = 'bootstrap/js/popover.js'
+; scripts[] = 'bootstrap/js/scrollspy.js'
+; scripts[] = 'bootstrap/js/tab.js'
+; scripts[] = 'bootstrap/js/transition.js'
+
+
+;
+; ; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
+; settings[bootstrap_cdn] = ''
+
+
+; ;-------------------------
+; ; METHOD 2: Bootstrap CDN
+; ;-------------------------
+;
+; Method 2 uses BootstrapCDN, the only thing you might need to provide here
+; is overrides to Bootstrap theme settings. Copy them here from the base theme
+; to override.
