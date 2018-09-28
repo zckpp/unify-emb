@@ -44,94 +44,110 @@
           <?php endif; ?>
     </section>
 
-    <div class="col-xs-12">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
 
-        <?php if ($messages): ?>
-          <div id="messages"><div class="section clearfix">
-            <?php print $messages; ?>
-          </div></div> <!-- /.section, /#messages -->
-        <?php endif; ?>
+                <?php if ($messages): ?>
+                    <div id="messages"><div class="section clearfix">
+                            <?php print $messages; ?>
+                        </div></div> <!-- /.section, /#messages -->
+                <?php endif; ?>
 
-    <?php if ($breadcrumb): ?>
-      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-    <?php endif; ?>
+                <?php if ($breadcrumb): ?>
+                    <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+                <?php endif; ?>
 
-        <?php if (!empty($page['sidebar_first'])): ?>
-          <div id="sidebar-left" class="sidebar col-sm-3">
-            <div class="section">
-              <?php print render($page['sidebar_first']); ?>
+                <?php if (!empty($page['sidebar_first'])): ?>
+                    <div id="sidebar-left" class="sidebar col-sm-3">
+                        <div class="section">
+                            <?php print render($page['sidebar_first']); ?>
+                        </div>
+                    </div> <!-- /.section, /#sidebar-first -->
+                <?php endif; ?>
+
+
+                <div id="content" <?php print $content_column_class; ?>>
+                    <div class="section">
+                        <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
+                        <a id="main-content"></a>
+
+                        <?php print render($title_suffix); ?>
+                        <?php if ($tabs): ?>
+                            <div class="tabs">
+                                <?php print render($tabs); ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php print render($page['help']); ?>
+                        <?php if ($action_links): ?>
+                            <ul class="action-links">
+                                <?php print render($action_links); ?>
+                            </ul>
+                        <?php endif; ?>
+                        <div class="body-content">
+                            <?php print render($page['content']); ?>
+                            <?php print $feed_icons; ?>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <?php if (!empty($page['sidebar_second'])): ?>
+                    <div id="sidebar-right" class="sidebar col-sm-3">
+                        <div class="section">
+                            <?php print render($page['sidebar_second']); ?>
+                        </div>
+                    </div> <!-- /.section, /#sidebar-first -->
+                <?php endif; ?>
+
+
             </div>
-          </div> <!-- /.section, /#sidebar-first -->
-        <?php endif; ?>      
+        </div>
+    </div>
 
 
-      <div id="content" <?php print $content_column_class; ?>>
-        <div class="section">
-          <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
-          <a id="main-content"></a>
+      <div class="footer">
+          <div class="footer-first">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-sm-9 col-xs-12">
+                          <div class="footer-logo">
+                              <img src="<?php global $base_url; print $base_url;?>/sites/all/themes/bootstrap-d7-theme/img/footer-logo.png" alt="Carnegie Science">
+                          </div>
+                          <div class="footer-address">
+                              Carnegie Institution for Science | Department of Embryology <br>
+                              3520 San Martin Drive | Baltimore, Maryland 21218 | (410) 246-3001
+                          </div>
+                      </div>
 
-          <?php print render($title_suffix); ?>
-          <?php if ($tabs): ?>
-            <div class="tabs">
-              <?php print render($tabs); ?>
-            </div>
-          <?php endif; ?>
-          <?php print render($page['help']); ?>
-          <?php if ($action_links): ?>
-            <ul class="action-links">
-              <?php print render($action_links); ?>
-            </ul>
-          <?php endif; ?>
-          <div class="body-content">
-            <?php print render($page['content']); ?>
-            <?php print $feed_icons; ?>
+                      <div class="col-sm-3 col-xs-12">
+                          <!--            <div class="social-title">Follow</div>-->
+                          <div class="social-icons">
+                              <a class="social-link" target="_blank" href="https://www.facebook.com/CarnegieEmbryology"><i class="fa fa-facebook fa-2x"></i></a>
+                              <a class="social-link" target="_blank" href="https://twitter.com/CarnegieDevBio"><i class="fa fa-twitter fa-2x"></i></a>
+                              <a class="social-link" target="_blank" href="https://www.instagram.com/carnegiedevbio"><i class="fa fa-instagram fa-2x"></i></a>
+                              <a class="social-link" target="_blank" href="https://www.youtube.com/channel/UCTeJd08nZyUGQxQ-9rUeuTw"><i class="fa fa-youtube fa-2x"></i></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
 
-        </div>
+
+          <div class="footer-second">
+              <?php if ($page['footer_second']): ?>
+                  <?php print render($page['footer_second']); ?>
+              <?php endif; ?>
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-12" style="color: white">
+                          Copyright &copy; <?php echo date("Y"); ?> Carnegie Science. All rights reserved. <a style="color: white" href="https://carnegiescience.edu/privacy-policy" target="_blank">Privacy Policy</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
       </div>
-
-
-        <?php if (!empty($page['sidebar_second'])): ?>
-          <div id="sidebar-right" class="sidebar col-sm-3">
-            <div class="section">
-              <?php print render($page['sidebar_second']); ?>
-            </div>
-          </div> <!-- /.section, /#sidebar-first -->
-        <?php endif; ?>   
-
-        
-    </div>
-
-    <div class="footer col-xs-12">
-
-        <div class="footer-first">
-          <div class="col-xs-8">
-            <div class="footer-logo">
-              <img src="<?php global $base_url; print $base_url;?>/sites/all/themes/bootstrap-d7-theme/img/footer-logo.png" alt="Carnegie Science">
-            </div>
-            <div class="footer-address">
-              Carnegie Institution for Science | Department of Embryology <br>
-              3520 San Martin Drive | Baltimore, Maryland 21218 | (410) 246-3001
-            </div>        
-          </div>
-
-          <div class="col-xs-4">
-            <div class="social-title">Follow</div>
-            <div class="social-icons">         
-              <a class="social-link" target="_blank" href="https://www.facebook.com/CarnegieEmbryology"><i class="fa fa-facebook fa-2x"></i></a>
-              <a class="social-link" target="_blank" href="https://twitter.com/CarnegieDevBio"><i class="fa fa-twitter fa-2x"></i></a>
-              <a class="social-link" target="_blank" href="https://www.instagram.com/carnegiescience/"><i class="fa fa-instagram fa-2x"></i></a>
-              <a class="social-link" target="_blank" href="https://www.youtube.com/user/CarnegieInstitution/videos"><i class="fa fa-youtube fa-2x"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      <?php if ($page['footer_second']): ?>
-        <div class="footer-second">
-          <?php print render($page['footer_second']); ?>
-        </div>
-      <?php endif; ?>
-    </div>
 
   </div>

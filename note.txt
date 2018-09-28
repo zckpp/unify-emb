@@ -1,0 +1,7 @@
+Configure Superfish(enable module, update library, configure small screen) -> add to block layout
+
+update theme info, upload unify css, html.tpl.php
+ 
+news and seminar views -> add new block to block layout
+
+

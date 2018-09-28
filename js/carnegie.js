@@ -31,7 +31,7 @@ jQuery( document ).ready(function( $ ) {
         }
     });
     //if click on the menu or toggle button do not close, bind event to menu block instead of toggle button because it needs click to toggle
-    $('div.sf-accordion-toggle').click(function (e) {
+    $('#main-navigation').click(function (e) {
         e.stopPropagation();
         //Can only bind one object at a time
     });
